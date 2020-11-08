@@ -9,21 +9,27 @@
 </head>
 <body>
 <h1> Weather Dashboard</h1>
+<!---Search by City -->
 <aside>
-<h2> Search for a city</h2>
-    
-<div class="columns">
-<div class="column is-11 is-offset-1">
-        <label class="label city-input"></label>
-            <div class="controlBtn">
-                <input class="input is-primary" id="cityName" type="text" placeholder="Search city..."></input>
-                <button class="button is-primary"id="cityNameInput">Search</button>
-            </div>
-        </div>
+    <div class="input">
+        <input type="text" placeholder="Search by city..." class="input_text">
+        <input type="submit" value="Submit" class="submit">
+      </div>
     </div>
-</div> 
 </aside>
+<!--- Display Search by City Results -->
+ <section> 
+    <div class="container">  
+      <div class="card">
+        <h2 class="name" id="name"></h2>
+        <p class="temp"></p>
+        <p class="humidity"></p>
+        <p class="wind"></p>
+      </div>
+    </div>
+</section> 
 
-    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

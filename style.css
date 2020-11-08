@@ -1,25 +1,21 @@
-@import "https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">;
+@import "https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap";
 
-body {
-   
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Oswald;
   }
-
 
 h1 {
 
-    font-size: 85px;
+    font-size: 90px;
     text-align: center;
     color: white;
     background-color: rgb(55, 55, 116);
 }
 
-h2 {
-    font-size: 3px;
-    text-align: left;
-    color: rgb(172, 171, 171); 
-}
-
-.columns{
+.input{
     text-align: left;
     color: rgb(172, 171, 171);  
 }
@@ -30,3 +26,24 @@ aside {
     margin-left: 15px;
     float: left;
     font-style: italic;
+}
+
+.card{
+    width: 70%;
+    background: #e7e7e7;
+    height: 20vh
+    text-align: left;
+    border-style: none;
+    padding-left: 15px;
+    margin-left: 15px;
+  }
+  
+  .card h2 {
+    text-align: left;
+    font-size:30px;
+  }
+  
+  .card p{
+    text-align: left;
+    font-size:20px;   
+      }
