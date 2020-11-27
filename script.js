@@ -7,7 +7,7 @@ var humidity = document.querySelector('.humidity');
 var wind = document.querySelector('.wind');
 var button= document.querySelector('.submit');
 
-//-----------------------------Function for Weather by Search---------//
+//-----------------------------Function for searching weather by city---------//
 
 //var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=+input.value+'&units=imperial'+'&appid='+APIKey";
 
@@ -29,9 +29,10 @@ button.addEventListener('click', function(name){
       wind.innerHTML = "Wind Speed : " +windValue+"MPH";
       input.value ="";
     })
-    
+
     .catch(function(error) {
         console.log(error)
       });
 
     })
+
