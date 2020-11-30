@@ -6,23 +6,27 @@ var temp = document.querySelector('.temp');
 var humidity = document.querySelector('.humidity');
 var wind = document.querySelector('.wind');
 var button= document.querySelector('.submit');
+var submissionResponseEl = document.querySelector("#response");
+
 
 //-----------------------------Function for searching weather by city---------//
 
 //var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=+input.value+'&units=imperial'+'&appid='+APIKey";
 
-button.addEventListener('click', function(name){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=imperial'+'&appid='+APIKey)
+
+
+button.addEventListener('click', function(event){
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value + '&units=imperial'+'&appid='+APIKey)
     .then(function(response) {
         return response.json();
-      })
+      }) 
 
     .then(function(data) {
       var tempValue = data['main']['temp'];
       var nameValue = data['name'];
       var humidityValue = data ['main']['humidity'];
       var windValue = data ['wind'] ['speed'];
-    
+
       main.innerHTML = nameValue;
       temp.innerHTML = "Temperature : "+tempValue+"°F ";
       humidity.innerHTML = "Humidity : "+humidityValue+"%";
@@ -34,5 +38,14 @@ button.addEventListener('click', function(name){
         console.log(error)
       });
 
-    })
+  var response = input.value 
+  submissionResponseEl.textContent = response;
 
+  // fetch ("https://api.openweathermap.org/data/2.5/forecast?q=" + input.value + '&units=imperial'+'&appid='+APIKey)
+  // .then(function(response) {
+  //   return response.json();
+  // }) 
+
+  // var results = response.list;
+
+})
