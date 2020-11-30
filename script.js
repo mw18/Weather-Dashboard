@@ -16,6 +16,7 @@ var submissionResponseEl = document.querySelector("#response");
 
 
 button.addEventListener('click', function(event){
+    event.preventDefault();
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value + '&units=imperial'+'&appid='+APIKey)
     .then(function(response) {
         return response.json();
